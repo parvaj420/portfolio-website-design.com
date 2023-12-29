@@ -1,0 +1,508 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" integrity="sha512-..." crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="download.gif" type="image/x-icon">
+    <title>Fireship</title>
+</head>
+<style>
+    
+    /* / <!-- \\\\\\\\\\\\\\\ body start//////////////////// -->/  */
+    body{
+        background: linear-gradient(rgb(15, 15, 25),rgb(50, 50, 50));
+        overflow-x: hidden;
+    }
+    ::-webkit-scrollbar{
+        height: 0;
+        width: .5rem;
+    }
+    ::-webkit-scrollbar-track{
+        background: linear-gradient(45deg,rgb(69, 69, 69),rgb(0, 0, 0));
+        backdrop-filter: blur(10px);
+    }
+    ::-webkit-scrollbar-thumb{
+        background: rgb(73, 73, 73);
+        border-radius: 10px;
+    }
+    /* / <!-- \\\\\\\\\\\\\\\ box start//////////////////// -->/  */
+      .box{
+        transform: translateX(-400%);
+        transition: transform .4s ease .2s;
+      }
+      .box.show{
+        opacity: 0;
+        transform: translateX(0);
+        animation: opacity .7s ease-in .3s forwards;
+      }
+      @keyframes opacity{
+        0%{opacity: 0;}
+        100%{opacity: 1;}
+      }
+    /* / <!-- \\\\\\\\\\\\\\\ box end///////////  ///////// -->/  */
+    /* / <!-- \\\\\\\\\\\\\\\ body end///////////  ///////// -->/  */
+    /* / <!-- \\\\\\\\\\\\\\\ box1 start//////////////////// -->/  */
+    
+    .logo:hover{
+        cursor: pointer;
+    }
+    .logoImg2{
+        opacity: 0;
+    }
+    .logo:hover .logoImg1{opacity: 0;}
+    .logo:hover .logoImg2{opacity: 1;}
+    nav .btn1{
+        background: rgba(0, 128, 0, 0);
+        border: 1.5px solid rgb(48, 216, 6);
+        color: rgb(3, 224, 3);
+        transition: .3s;
+        font-size: smaller;
+        font-weight: bolder;
+    }
+    nav .btn1:hover{
+        background-color: rgba(3, 224, 3, 0.127);
+        transform: scale(1.1);
+    }
+    nav .search{
+        background-color: rgba(91, 94, 90, 0.274);
+        padding: 10px 20px;
+        border: 2px solid white;
+        transition: .2s;
+    }
+    nav .search:hover{
+        background-color: rgba(126, 97, 140, 0.274);
+        border-color: blueviolet;
+    }
+    button{
+        font-weight: bolder;
+        transition: .2s;}
+    nav .btn-lg:hover{
+        background: rgb(140, 0, 255);
+        color: aliceblue;
+    }
+    nav .icon1,.icon2{display: none;}
+    nav .text2:hover{color: rgb(174, 0, 255);}
+    nav .text2,.text1{transition: .2s;}
+    nav .text2:hover,.text1:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+    .dsn{display: none;}
+    /* / <!-- \\\\\\\\\\\\\\\ box1 end///////////  ///////// -->/  */
+    /* / <!-- \\\\\\\\\\\\\\\ box2 start//////////////////// -->/  */
+    .box2{
+        margin: 100px 0;
+    }
+    .box2_1{
+        max-width: 500px;
+    }
+    .box2 .btn1{
+        padding: 5px 10px;
+        background-color: rgb(45, 224, 13);
+        border: none;
+        color: aliceblue;
+    }
+    .box2 .btn1:hover{
+        background-color: rgb(30, 164, 7);
+    }
+    .box2 p{
+        font-size: 20px;
+    }
+    .box2 .span2{color: deeppink;}
+    .box2_2{
+        padding: 10px; margin: 10px;
+        max-width: 400px; position: relative;
+    }
+    .box2 iframe{
+        position: absolute;
+        transform: translate(40px);
+        top: 50px;
+    }
+    .hoverImg1,.hoverImg2,.hoverImg3,.hoverImg4,.hoverImg5,.hoverImg6{
+        width: 100px;
+        position: absolute;
+        opacity: 0;
+        transform: translate(-100px ,-25px);
+    }
+    .cardItem{
+        margin: 10px 0;
+        cursor: pointer;
+    }
+    .cardItem:nth-child(3){border: 1px solid blueviolet; padding: 5px 0; transition: .3s;}
+    .cardItem:nth-child(3):hover{background: blueviolet;}
+    
+    /* / <!-- \\\\\\\\\\\\\\\ box2 end///////////  ///////// -->/  */
+    /* / <!-- \\\\\\\\\\\\\\\ box3 start//////////////////// -->/  */
+    .box3{
+        margin: 250px auto;
+        margin-bottom: 0;
+    }
+    .box3btn{
+        font-size: 40px;
+        background: rgb(255, 53, 53);
+        border: none;
+        margin-bottom: 100px;
+    }
+    .hoverImg3{
+        opacity: 0;
+        width: 150px;
+        transform: translate(-70px ,-140px);
+    }
+    .span3{
+        color: rgb(255, 53, 53);
+        font-size: 40px;
+        animation: placeholder 1s ease infinite;
+    }
+    .box3 .emo,.emo{
+        position: absolute;
+         left: 0; right: 0; margin: auto;
+        transform: translate(0, -0px);
+        animation: upDown 1s ease infinite;
+    }
+    @keyframes upDown {
+        0%{transform: translate(0, -0px);}
+        50%{transform: translate(0, -7px);}
+        100%{transform: translate(0, -0px);}
+    }
+    @keyframes placeholder {
+        0%{color: rgb(255, 53, 53);}
+        50%{color: rgb(159, 0, 0);}
+    }
+    .emo:nth-child(2){ top: 50%;}
+    /* / <!-- \\\\\\\\\\\\\\\ box3 end///////////  ///////// -->/  */
+    /* / <!-- \\\\\\\\\\\\\\\ box4 start//////////////////// -->/  */
+    .box4{
+        width: 95%;
+        margin:200px auto;
+        padding-top: 150px;
+    }
+    .box4 .box3btn{
+        background: rgb(0, 188, 0);
+    }
+    .span4{
+        color: rgb(0, 207, 0);
+        animation: green 1s ease infinite;
+    }
+    .hoverImg4{
+        width: 200px;
+        transform: translate(-230px ,-175px);
+    }
+    .box4 .emoBtn{
+       background-color: rgba(0, 0, 0, 0);
+       border: none;
+       width: 100%; 
+       margin-top: 50px;
+       animation: upDown 1s ease infinite;
+    }
+    @keyframes green {
+        0%{color: rgb(31, 206, 0);}
+        50%{color: rgb(29, 159, 0);}
+    }
+    /* / <!-- \\\\\\\\\\\\\\\ box4 end///////////  ///////// -->/  */
+    /* / <!-- \\\\\\\\\\\\\\\ box5 start//////////////////// -->/  */
+    .box5{
+        margin:200px auto;
+    }
+    .box5 .box3btn{
+        background: blueviolet;
+    }
+    .span5{
+        color: deeppink;
+        animation: deeppink 1s ease infinite;
+    }
+    .hoverImg5{
+        width: 200px;
+        transform: translate(-230px ,-140px);
+    }
+    @keyframes deeppink {
+        0%{color: deeppink;}
+        50%{color: rgb(162, 0, 86);}
+    }
+    /* / <!-- \\\\\\\\\\\\\\\ box5 end///////////  ///////// -->/  */
+    /* / <!-- \\\\\\\\\\\\\\\ box6 start//////////////////// -->/  */
+    .hoverImg6{
+        width: 100px;
+        transform: translate(-120px ,-85px);
+    }
+    .span6{
+        color:gold;
+        animation: gold 1s ease infinite;
+    }
+    @keyframes gold {
+        0%{color: gold;}
+        50%{color: rgb(189, 143, 25);}
+    }
+    /* / <!-- \\\\\\\\\\\\\\\ box6 end///////////  ///////// -->/  */
+    /* / <!-- \\\\\\\\\\\\\\\ box7 start//////////////////// -->/  */
+    footer{
+        margin: 100px;
+    }
+    footer .line{
+        margin: 100px auto;
+        width: 120px;
+        height: 5px;
+        background: linear-gradient(45deg, rgb(20, 19, 19),rgb(122, 120, 120));
+    }
+    /* / <!-- \\\\\\\\\\\\\\\ box7 end///////////  ///////// -->/  */
+    /* / <!-- \\\\\\\\\\\\\\\ box8 start//////////////////// -->/  */
+    @media (max-width: 1000px) {
+        .box2_1{max-width: 400px;}
+    }
+    @media (max-width: 850px) {
+        nav .search,nav .btn-lg{
+           display: none;
+        }
+        nav .icon1,.icon2{display: block;}
+        .box2{
+            flex-direction: column;
+        }
+        .box2_2{
+            width: fit-content;
+            align-items: center;
+        }
+        .box2 iframe{
+          width: 64%;
+          height: 55%;
+        transform: translate(34px);
+        top: 47px;
+        }
+
+    }
+    @media (max-width: 670px) {
+        .box2_2{
+            width: 450px;
+        }
+    }
+    @media (max-width: 470px) {
+        .box2_2{max-width: 80%; padding: 0; margin: 100px auto;}
+        .box2_2 .img{
+            display: none;
+        }
+        .box2 iframe{
+          width: 100%;
+          /* height: %; */
+        transform: translate(0px); 
+        top: 0px;
+        position: relative;
+        }
+       .dsn{display: block;}
+       .dsb{display: none;}
+    }
+    /* / <!-- \\\\\\\\\\\\\\\ box8 end///////////  ///////// -->/  */
+</style>
+<body>
+    
+     <!-- \\\\\\\\\\\\\\\ box1 start navbar-brand//////////////////// -->
+     <nav class="navbar">
+       <div class="container-fluid">
+        <div class=" logo" style="width: 48px; position: relative;">
+        <img class="logoImg2" src="download.gif" alt="" width="48" height="48">
+        <img  src="https://fireship.io/img/logo.svg" alt="" width="48" height="48" class="logoImg1" style="position: absolute; left: 0;" >
+        </div>
+    <div class="d-flex align-items-center gap-4 text-light">
+        <button class="dsn btn1 rounded" data-bs-toggle="collapse" data-bs-target="#collapse"><i class="fa-regular fa-chart-bar" style="color: #66ff00;"></i></button>
+        <button class="dsb btn1 rounded">PRO</button>
+        <b class="dsb text1">labs</b>
+        <b class="dsb text2">courses</b>
+        <div class="search"><i class="fa-solid fa-magnifying-glass text-white-50"></i><input type="search" placeholder="Search"  style="border: none; background: rgba(255, 0, 0, 0); outline: none; color: aliceblue;"><span class="border border-white-50 btn btn-sm text-white-50">/</span></div>
+        <button class="btn btn-light btn-lg" style="border: none; padding: 10px 20px; border-radius: 0;"><b>LOGIN</b></button>
+        <i class="fa-solid fa-magnifying-glass text-light icon1" style="cursor: pointer;"></i>
+        <i class="fa-solid fa-right-to-bracket icon2" style="color: #ffffff; cursor: pointer; margin-right: 4vw;"></i>
+    </div>
+    </div>
+     </nav>
+     <!-- \\\\\\\\\\\\\\\ box1 end///////////  ///////// -->
+     <main style="overflow-x: hidden; margin: auto;">
+     <!-- \\\\\\\\\\\\\\\ box2 start//////////////////// -->
+     <div class=" w-100 d-flex box2 align-items-center justify-content-around position-relative text-white" >
+        <div class=" position-absolute" style="max-width: 200px; top: 0px; backdrop-filter: blur(5px);">
+           <div class="collapse collapse-horizontal" id="collapse" >
+            <div class="card card-body border text-center" style="background: rgba(255, 0, 0, 0); width: 200px;">
+              <div class="carItem"><button class=" btn1 rounded">PRO</button></div>
+              <div class="cardItem"><b class=" text1">labs</b>
+            </div>
+            <div class="cardItem"><b class=" text2">courses</b></div>
+           </div>
+        </div>
+        </div>
+      <div class="p-2 m-3 text-center box2_1">
+        <h1><b>LEARN TO CODE</b></h1>
+        <h2 class="text-warning"><b>FASTER.</b></h2><br>
+        <p class="fw-bolder text-white-50">fireship is a <span class="text-warning span1"><img class="hoverImg1" src="https://fireship.io/img/speed.gif" alt=""> blazingly fast </span >&& <span class="span2"><img class="hoverImg2" src="https://fireship.io/img/cat.gif" alt=""> highly-amusing </span>way to level up your programming skill</p><br>
+        <button class="btn1">START HERE</button>
+      </div>
+      <div class=" box2_2 d-flex align-items-center">
+        <div class="img" >
+        <img src="download.png" class="w-100" alt="">
+        </div>
+        <iframe class=" rounded" width="245" height="145px"  src="https://www.youtube.com/embed/xd8dKY6Ozrg?si=jjHz9V3GeBPA810E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+     </div>
+     <!-- \\\\\\\\\\\\\\\ box2 end///////////  ///////// -->
+     <!-- \\\\\\\\\\\\\\\ box3 start//////////////////// -->
+     <div class="box box3 container text-center position-relative">
+        <button class="p-5 pt-3 pb-3 fw-bolder box3btn">Hard Truth</button>
+        <a class="emo text-decoration-none" href="#box4"><h1>👇</h1></a>
+        <h1 class="text-white-50 mt-5 mb-5">You <span class="span3 fw-bolder"><img src="https://fireship.io/img/sad.gif" class="hoverImg3" alt=""> can't </span>learn to code by watching videos</h1> 
+        <span class="emo text-light">i'm sad 😢</span>
+     </div>
+     <!-- \\\\\\\\\\\\\\\ box3 end///////////  ///////// -->
+     <!-- \\\\\\\\\\\\\\\ box4 start//////////////////// -->
+     <div class="box box4  text-center position-relative" id="box4">
+        <button class="p-5 pt-3 pb-3 fw-bolder box3btn">Solution</button>
+        <a class="emo text-decoration-none " href="#box5"><h1>👇</h1></a>
+        <h2 class="text-white-50 fw-light">Fireship is all about <span class="span4 fw-bolder fs-1"> <img src="https://fireship.io/img/build.gif" class= "hoverImg4 "alt="">project-based</span>  learning. I create short highly-focused videos that make learning to code addicting.</h2>
+        <button class="emoBtn text-light">but like how? 🧐</button>
+     </div>
+     <!-- \\\\\\\\\\\\\\\ box4 end///////////  ///////// -->
+     <!-- \\\\\\\\\\\\\\\ box5 start//////////////////// -->
+     <div class="box box5 box4  text-center position-relative" id="box5">
+        <button class="p-5 pt-3 pb-3 fw-bolder box3btn">HAVE FUN</button>
+        <a class="emo text-decoration-none " href="#box6"><h1>👇</h1></a>
+        <h1 class="text-white-50 fw-light">I built this one-of-a-kind learning platform to give you <span class="span5 text-uppercase fw-bolder"> <img src="https://fireship.io/img/dance.gif" alt="" class="hoverImg5">dopamine</span> hits like XP and meme prizes for every little accomplishment</h1>
+        <button class="emoBtn text-light">login now to start earning useless XP points 💎</button>
+     </div>
+     <!-- \\\\\\\\\\\\\\\ box5 end///////////  ///////// -->
+     <!-- \\\\\\\\\\\\\\\ box6 start//////////////////// -->
+     <div class="box box5 box4  text-center position-relative" id="box6">
+        <button class="p-5 pt-3 pb-3 fw-bolder box3btn bg-warning">LET'S GO</button>
+        <h1 class="text-white-50">
+            There's tons of free content here, so <span class="text-uppercase span6 fw-bolder"> <img src="https://fireship.io/img/look.gif" alt="" class="hoverImg6">play</span> around before you upgrade
+        </h1>
+        <button class="emoBtn text-light">every course starts free, try it out 🚀</button>
+     </div>
+     <!-- \\\\\\\\\\\\\\\ box6 end///////////  ///////// -->
+     <!-- \\\\\\\\\\\\\\\ box7 start//////////////////// -->
+     <div class="box8 text-center p-2 text-white-50">
+        <div class="rounded mb-3" style="margin: auto; height: 5px ;max-width: 150px; background: linear-gradient(45deg,black,rgb(255, 255, 255));"></div>
+        <p class="text-white-50" style="">Find an issue with this page? <a href="#" class="text-decoration-none">Fix it on GitHub</a></p>
+        <p class="text-white-50">need help? Email <span class="text-light">hello@fireship.io</span></p>
+        <div class="hstac align-items-center justify-content-center mt-3 mb-3 text-white-50 fs-2">
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-github"></i>
+            <i class="fa-brands fa-discord"></i>
+        </div>
+        <p>Helpful Links</p>
+        <p>Courses | Labs | Snippets | Tags | Contrib | Privacy | Terms</p>
+        <small class="text-light">Copyright © 2023 Fireship LLC</small>
+     </div>
+    </main>
+     <!-- \\\\\\\\\\\\\\\ box7 end///////////  ///////// --> 
+     <!-- \\\\\\\\\\\\\\\ box8 start//////////////////// -->
+     <!-- \\\\\\\\\\\\\\\ box8 end///////////  ///////// -->
+</body>
+<script>
+    
+    /* / <!-- \\\\\\\\\\\\\\\ box1 start//////////////////// -->/  */
+    /* / <!-- \\\\\\\\\\\\\\\ box1 end///////////  ///////// -->/  */
+    /* / <!-- \\\\\\\\\\\\\\\ box2 start//////////////////// -->/  */
+    let hoverImg1 = document.querySelector(".hoverImg1")
+    let hoverImg2 = document.querySelector(".hoverImg2")
+    let hoverImg3 = document.querySelector(".hoverImg3")
+    let hoverImg4 = document.querySelector(".hoverImg4")
+    let hoverImg5 = document.querySelector(".hoverImg5")
+    let hoverImg6 = document.querySelector(".hoverImg6")
+    let span1 = document.querySelector(".span1")
+    let span2 = document.querySelector(".span2")
+    let span3 = document.querySelector(".span3")
+    let span4 = document.querySelector(".span4")
+    let span5 = document.querySelector(".span5")
+    let span6 = document.querySelector(".span6")
+        span1.addEventListener("mousemove",(e)=>{
+            hoverImg1.style.opacity = 1
+            hoverImg1.style.left = e.x + "px"
+        })
+        span1.addEventListener("mouseleave",()=>{
+            hoverImg1.style.opacity = 0
+        })
+        span2.addEventListener("mousemove",(e)=>{
+            hoverImg2.style.opacity = 1
+            hoverImg2.style.left = e.x + "px"
+        })
+        span2.addEventListener("mouseleave",()=>{
+            hoverImg2.style.opacity = 0
+        })
+        span3.addEventListener("mousemove",(e)=>{
+            hoverImg3.style.opacity = 1
+            hoverImg3.style.left = e.x + "px"
+        })
+        span3.addEventListener("mouseleave",()=>{
+            hoverImg3.style.opacity = 0
+        })
+        span4.addEventListener("mousemove",(e)=>{
+            hoverImg4.style.opacity = 1
+            hoverImg4.style.left = e.x + "px"
+        })
+        span4.addEventListener("mouseleave",()=>{
+            hoverImg4.style.opacity = 0
+        })
+        span5.addEventListener("mousemove",(e)=>{
+            hoverImg5.style.opacity = 1
+            hoverImg5.style.left = e.x + "px"
+        })
+        span5.addEventListener("mouseleave",()=>{
+            hoverImg5.style.opacity = 0
+        })
+        span6.addEventListener("mousemove",(e)=>{
+            hoverImg6.style.opacity = 1
+            hoverImg6.style.left = e.x + "px"
+        })
+        span6.addEventListener("mouseleave",()=>{
+            hoverImg6.style.opacity = 0
+        })
+
+        
+    /* / <!-- \\\\\\\\\\\\\\\ box2 end///////////  ///////// -->/  */
+    /* / <!-- \\\\\\\\\\\\\\\ box3 start//////////////////// -->/  */
+    /* / <!-- \\\\\\\\\\\\\\\ box3 end///////////  ///////// -->/  */
+    /* / <!-- \\\\\\\\\\\\\\\ box4 start//////////////////// -->/  */
+    /* / <!-- \\\\\\\\\\\\\\\ box4 end///////////  ///////// -->/  */
+    /* / <!-- \\\\\\\\\\\\\\\ box5 start//////////////////// -->/  */
+    /* / <!-- \\\\\\\\\\\\\\\ box5 end///////////  ///////// -->/  */
+    /* / <!-- \\\\\\\\\\\\\\\ box6 start//////////////////// -->/  */
+    const boxes = document.querySelectorAll(".box")
+    window.addEventListener('scroll',checkBoxes)
+    checkBoxes()
+    function checkBoxes(){
+        const triggerBottom = window.innerHeight / 3*3;
+        boxes.forEach(box => {
+            const boxTop = box.getBoundingClientRect().top;
+            if(boxTop < triggerBottom){
+                box.classList.add('show')
+            }else{
+                box.classList.remove('show')
+            }
+        })
+    }
+    /* / <!-- \\\\\\\\\\\\\\\ box6 end///////////  ///////// -->/  */
+    /* / <!-- \\\\\\\\\\\\\\\ box7 start//////////////////// -->/  */
+    /* / <!-- \\\\\\\\\\\\\\\ box7 end///////////  ///////// -->/  */
+    console.log(`
+           
+           
+PPPPPPb.        AAAAAA           PPPPPPb.   VAA                AAV     AAAAAA         AVAVAVAAI
+ppp "PPPb      AAAAAAAA          PPP "PPPb   VAA  VAA    AAV  AAV     AAAAAAAA              !!!       
+ppp   BBB     AAV    VAA         PPP   888    VAA  VAA  AAV  AAV     AAV    VAA             !!!
+PPP  dPPP    AAV      VAA        PPP  dPPP     VAA  VAVAVV  AAV     AAV      VAA            !!!
+PPP dPPP    AAV  AAAA  VAA       PPP dPPP       VAA  VVVV  AAV     AAV  AAAA  VAA           !!!
+PPPPPP"    AAV  AAAAAA  VAA      PPPPPP"         VAA      AAV     AAV  AAAAAA  VAA     000  !!!
+PPP       AAV  AAV  VAA  VAA     PPP VPA          VAA    AAV     AAV  AAV  VAA  VAA   000   !!!
+PPP      AAV              VAA    PPP  VPA          VAVAVAAV     AAV              VAA   000  !!!
+PPP     AAV                VAA   PPP   VPA          VAVAVV     AAV                VAA  "s0000s"     
+    `);
+   
+    /* / <!-- \\\\\\\\\\\\\\\ box8 start//////////////////// -->/  */
+    /* / <!-- \\\\\\\\\\\\\\\ box8 end///////////  ///////// -->/  */
+</script>
+</html>
